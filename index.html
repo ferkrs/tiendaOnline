@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    
+    <!-- Contenedor para la Barra de Navegación -->
+    <div id="navbar"></div>
+
+    <!-- Contenedor para los Productos -->
+    <div id="productos"></div>
+
+    <!-- Contenedor para el Footer -->
+    <div id="footer"></div>
+
+    <!-- Modal del Carrito -->
+
+
+<!-- Modal del Carrito -->
+<div id="modal-carrito" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden">
+    <div class="relative top-20 mx-auto p-5 border w-11/12 md:w-2/3 lg:w-1/2 shadow-lg rounded-md bg-white">
+        <!-- Encabezado del Modal -->
+        <div class="flex justify-between items-center pb-3">
+            <p class="text-2xl font-bold">Tu Carrito</p>
+            <div class="modal-close cursor-pointer z-50">
+                <!-- Icono para cerrar el modal -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current text-black" viewBox="0 0 18 18">
+                    <path d="M14.53 4.53a.75.75 0 00-1.06 0L9 8.94 4.53 4.53a.75.75 0 10-1.06 1.06L7.94 10l-4.47 4.47a.75.75 0 101.06 1.06L9 11.06l4.47 4.47a.75.75 0 101.06-1.06L10.06 10l4.47-4.47a.75.75 0 000-1.06z"/>
+                </svg>
+            </div>
+        </div>
+        <!-- Contenido del Carrito -->
+        <div id="contenido-carrito" class="overflow-y-auto max-h-96">
+            <!-- Los productos del carrito se cargarán aquí dinámicamente -->
+        </div>
+        <!-- Pie del Modal con el Total y el botón de Checkout -->
+        <div class="flex justify-end mt-4">
+            <p class="text-lg font-semibold text-gray-800 mr-4" id="total-carrito-modal">Total: Q 0.00</p>
+            <a href="checkout.html" class="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700">
+                Ir al Checkout
+            </a>
+        </div>
+    </div>
+</div>
+
+    <!-- Scripts -->
+    <script src="assets/js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+</body>
+</html>
+

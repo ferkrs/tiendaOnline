@@ -1,0 +1,91 @@
+ 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración - TiendaOnline</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Barra de Navegación -->
+    <div id="navbar-admin"></div>
+
+    <main class="max-w-7xl mx-auto p-4">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">Panel de Administración</h1>
+
+        <!-- Sección de Gestión de Productos -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Gestionar Productos</h2>
+            <form id="form-agregar-producto" class="bg-white p-4 rounded shadow-md">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-gray-700">Nombre del Producto</label>
+                        <input type="text" id="nombre-producto" class="w-full border rounded p-2 mt-1" placeholder="Nombre" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700">Precio (Q)</label>
+                        <input type="number" id="precio-producto" class="w-full border rounded p-2 mt-1" placeholder="Precio" min="0" step="0.01" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700">URL de la Imagen</label>
+                        <input type="url" id="imagen-producto" class="w-full border rounded p-2 mt-1" placeholder="https://ejemplo.com/imagen.jpg" required>
+                    </div>
+                </div>
+                <button type="submit" class="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">
+                    Agregar Producto
+                </button>
+            </form>
+
+            <!-- Lista de Productos -->
+            <div class="mt-6">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">Lista de Productos</h3>
+                <table class="min-w-full bg-white rounded-lg shadow-md">
+                    <thead>
+                        <tr>
+                            <th class="py-2 px-4 border-b">Imagen</th>
+                            <th class="py-2 px-4 border-b">Nombre</th>
+                            <th class="py-2 px-4 border-b">Precio (Q)</th>
+                            <th class="py-2 px-4 border-b">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-productos" class="divide-y">
+                        <!-- Productos se cargarán dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Sección de Gestión de Órdenes -->
+        <section>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Gestionar Órdenes</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-lg shadow-md">
+                    <thead>
+                        <tr>
+                            <th class="py-2 px-4 border-b">ID de Orden</th>
+                            <th class="py-2 px-4 border-b">Cliente</th>
+                            <th class="py-2 px-4 border-b">Total (Q)</th>
+                            <th class="py-2 px-4 border-b">Fecha</th>
+                            <th class="py-2 px-4 border-b">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-ordenes" class="divide-y">
+                        <!-- Órdenes se cargarán dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-admin"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+</body>
+</html>
